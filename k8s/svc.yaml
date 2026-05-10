@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-app
+  namespace: webapp
+spec:
+  selector:
+    app: web-app          # Matches pods with label 'app: my-app'
+  ports:
+    - protocol: TCP
+      port: 5000           # Port exposed by the service
+      targetPort: 5000   # Port the application is listening on in the pod
+  type: ClusterIP
+
