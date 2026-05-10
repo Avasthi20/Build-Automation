@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: webapp
-        image: flask-test:1.0.0
+        image: avasthi20/flask-test:1.0.0
         ports:
         - containerPort: 5000
 
