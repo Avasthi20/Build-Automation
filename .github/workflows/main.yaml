@@ -3,6 +3,9 @@ name: build flow
 on: 
   workflow_dispatch:
   push:
+    paths:
+      ./Dockerfile
+      ./src/*  
 
 jobs:
   docker-build-and-push:
