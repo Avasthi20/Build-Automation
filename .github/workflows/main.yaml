@@ -30,7 +30,15 @@ jobs:
     - name: push in k8s
       run: |
             sed -i "s|image:.*|image: avasthi20/flask-test:${{ github.run_number }}|g" k8s/deploy.yaml 
+    - name: Commit changes
+      run: |
+        git config --global user.name "avasthi20"
+        git config --global user.email "avasthi.amit20@gamil.com"
+        git add .
+        git commit -m "auto update [skip ci]" || echo "No changes"
 
+    - name: Push changes
+      run: git push
   
 
 
