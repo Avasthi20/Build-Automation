@@ -21,7 +21,9 @@ jobs:
       uses: docker/build-push-action@v7
       with: 
         push: true
-        tags: avasthi20/flask-test:latest
+        tags: |
+          avasthi20/flask-test:latest
+          avasthi20/flask-test:${{ github.run_number }}
 
   
 
