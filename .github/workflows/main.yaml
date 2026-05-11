@@ -27,6 +27,9 @@ jobs:
         tags: |
           avasthi20/flask-test:latest
           avasthi20/flask-test:${{ github.run_number }}
+    - name: push in k8s
+      run: |
+            sed -i "s|image:.*|image: avasthi20/flask-test:${{ github.run_number }}|g" k8s/deploy.yaml 
 
   
 
