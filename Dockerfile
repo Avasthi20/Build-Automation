@@ -6,9 +6,9 @@ ENV APP_VERSION="1.0.0"
 
 RUN pip install flask
 
-COPY app.py .
+COPY src/app.py .
 
 EXPOSE 5000
 
-CMD ["python3", "app.py"]
+CMD ["python3", "src/app.py"]
 
