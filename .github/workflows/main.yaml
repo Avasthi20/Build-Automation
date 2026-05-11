@@ -21,7 +21,7 @@ jobs:
       uses: docker/build-push-action@v7
       with: 
         push: true
-        tag: flask-test:latest
+        tag: avasthi20/flask-test:latest
 
   
 
