@@ -6,6 +6,8 @@ on:
     paths:
       ./Dockerfile
       ./src/*  
+permissions:
+  contents: write
 
 jobs:
   docker-build-and-push:
