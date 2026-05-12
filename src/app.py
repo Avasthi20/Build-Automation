@@ -12,7 +12,7 @@ def home():
     return jsonify({
         "status": "running",
         "version": VERSION,
-        "message": f"You are running version {VERSION} of the container."
+        "message": f"You are running version {VERSION} of the container. update for testing"
     })
 
 if __name__ == "__main__":
